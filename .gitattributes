@@ -1,0 +1,15 @@
+* text=auto
+
+*.html text
+*.js text
+*.css text
+
+*.sln text eol=crlf
+*.bat eol=crlf
+*.json eol=crlf
+*.xml eol=crlf
+*.cmd eol=crlf
+
+.sh eol=lf
+
+*.jpg binary
