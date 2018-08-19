@@ -4,6 +4,12 @@
 *.js text
 *.css text
 
+*.html diff=html
+*.css diff=css
+*.png diff=image
+*.svg diff=image
+
+
 *.sln text eol=crlf
 *.bat eol=crlf
 *.json eol=crlf
