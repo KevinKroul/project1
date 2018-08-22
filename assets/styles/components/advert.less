@@ -1,0 +1,74 @@
+.advert {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: center;
+    flex-wrap: nowrap;
+    height: 90px;
+    font-size: 12px;
+    background-color: #f5f5f5;
+
+    &__link:hover {
+        cursor: pointer;
+    }
+
+    &__image {
+        width: 259px;
+        background-image: url("//yastatic.net/www/_/X9Gf63/9c73e3Ekh/zrIP6oS/vpT/ai5HyA_cpM/5oP/o3Did3Uc/SEgmVu/mpFG/HF-E7e393/gqzJ/9d5pqa/L3mDpm1O/k_mmj/VhQv5J/sdxXxI/ZaLTvvh/p");
+    }
+
+    &__content {
+        width: 290px;
+        padding: 16px;
+    }
+
+    &__title {
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    &__more-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-right: 18px;
+    }
+
+    &__button {
+        display: inline-block;
+        width: 121px;
+        height: 32px;
+        line-height: 32px;
+        text-align: center;
+        color: white;
+        border-radius: 3px;
+        background-color: #2ea5f4;
+    }
+
+    &__button:hover {
+        background-color: #0998fa;
+        cursor: pointer;
+    }
+
+    &__site {
+        display: inline-block;
+        width: 121px;
+        height: 32px;
+        line-height: 32px;
+        text-align: center;
+        color: #999;
+        font-size: 10px;
+    }
+
+    &__site:hover {
+        cursor: pointer;
+    }
+
+    &__close {
+        width: 16px;
+        height: 16px;
+        background: url(//yastatic.net/www/_/R/6/NrxzASAPi9QSmGS6qAwJt-XRA.svg) center center #fff no-repeat;
+    }
+}

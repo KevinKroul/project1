@@ -1,6 +1,31 @@
 .layout {
-  min-width: 300px;
-  margin: 0;
-  font-size: 13px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding-top: 58px;
+  min-width: 1065px;
+  font-family: 'YS Text', Arial, Helvetica, sans-serif;
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
+    flex-wrap: nowrap;
+    min-width: 900px;
+  }
+
+  &__col {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: left;
+    flex-grow: 1;
+    padding-top: 20px;
+    min-width: 270px;
+  }
 }

@@ -3,12 +3,19 @@
 const gulp = require("gulp");
 const browserSync = require('browser-sync').create();
 const less = require('gulp-less');
-
+const autoprefixer = require('gulp-autoprefixer');
 
 
 gulp.task('less', function() {
     return gulp.src("assets/styles/main.less")
         .pipe(less())
+        .pipe(autoprefixer({
+
+        browsers: ['last 2 versions'],
+
+        cascade: false
+
+      }))
         .pipe(gulp.dest("assets/styles"))
         .pipe(browserSync.stream());
 });

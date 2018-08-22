@@ -1,24 +1,43 @@
 .location {
-
-  text-decoration: none;
-  color: #999;
-  cursor: pointer;
-  font-family: 'YS Text', Arial,Helvetica, sans-serif;
-  font-size: 13px;
-
-  &__value {
     display: inline-block;
-    text-align: right;
-    position: relative;
-    left: 20px;
-    top: 0px;
-    padding-left: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
+    position: absolute;
+    top: 0;
+    left: 18px;
+    width: 105px;
+    height: 42px;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+        color: #cc0000;
+    }
+
+    &__value {
+        display: inline-block;
+        padding-left: 21px;
+        width: 42px;
+        height: 42px;
+        line-height: 42px;
+        color: #999;
+        font-family: 'YS Text', Arial,Helvetica, sans-serif;
+        font-size: 12px;
+
+        &:hover {
+            color: #cc0000;
+        }
+    }
+
+    &__value::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 19px;
+        height: 19px;
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='19' height='38' viewBox='0 0 19 38' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cdefs%3E%3Cg id='a'%3E%3Cpath d='m15 4l-11.9 5.3 5.8 0.8 0.5 5.5 5.6-11.6z'/%3E%3C/g%3E%3C/defs%3E%3Cuse xmlns='http://www.w3.org/2000/svg' xlink:href='%23a' fill='%23B3B3B3'/%3E%3Cuse xmlns='http://www.w3.org/2000/svg' xlink:href='%23a' fill='%23d00' transform='translate(0 19)'/%3E%3C/svg%3E");
+        transform: translateY(-50%);
+
+    }
 
 }
 
-.location:hover {
-  color: #cc0000;
-}

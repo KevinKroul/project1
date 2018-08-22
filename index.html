@@ -1,441 +1,730 @@
+<!--
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+-->
+
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport"
-		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Yandex</title>
-	<link rel="stylesheet" href="assets/styles/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Yandex</title>
+    <link rel="stylesheet" href="assets/styles/main.css">
 </head>
 <body>
 
-<a href="#" class="location">
-	<div class="location__icon"></div>
-	<div class="location__value">
-		Москва
-	</div>
-</a>
-
-<div class="settings-link">
-	<a class="link _dark">Настройка</a>
-</div>
-
-<div class="mail-widget _shadow-box">
-	<div class="mail-widget__link">
-    <div class="mail-widget__top-line _left">
-		  <a class="link _dark">Почта</a>
-	  </div>
-    <div class="mail-widget__top-line _right">
-		  <a class="link _pale">Завести почту</a>
-	  </div>
-  </div>
-	<div class="mail-widget__link _button">
-		<a class="link">Войти в почту</a>
-	</div>
-	<div class="mail-widget__link">
-		<a class="link _bonus">Получить плюс</a>
-	</div>
-	<!--TODO <div class="mail-widget__link">
-		<a class="link _default">Получить плюс</a>
-	</div>
-	<div class="mail-widget__link">
-		<a class="link _primary">Получить плюс</a>
-	</div>-->
-</div>
-
-<div class="dzen-widget _shadow-box">
-	<div class="dzen-widget__title">ADME</div>
-	<div class="dzen-widget__text">Мужчины признались, о чем хотели бы попросить женщин</div>
-</div>
-
 <main class="layout">
-  <section class="actual-news _clearfix">
-
-    <div class="actual-news__now _clearfix">
-      <a href="#" class="actual-news__link _main-link">
-            <h2 class="actual-news__title">Сейчас в СМИ</h2>
-      </a>
-      <a href="#" class="actual-news__link _main-link">
-            в Москве
-      </a>
-      <span class="actual-news__text">
-            16 августа, четверг
-      </span>
-      <a href="#" class="actual-news__link _main-link">
-        20:03
-      </a>
-    </div>
-
-    <ul class="actual-news__list">
-      <li class="actual-news__item">
-        <a href="#" class="link _dark">
-          Активистку   "Нового величия" Анну Павликову выпустили из СИЗО
-        </a>
-      </li>
-      <li class="actual-news__item">
-        <a href="#" class="link _dark">
-          В Киеве пригрозили «утопить россиян в крови» при нападении
-        </a>
-      </li>
-      <li class="actual-news__item">
-        <a href="#" class="link _dark">
-          Украинский министр анонсировал новые ограничения в сообщении с Россией
-        </a>
-      </li>
-      <li class="actual-news__item">
-        <a href="#" class="link _dark">
-          В Детройте умерла «королева соула» Арета Франклин
-        </a>
-      </li>
-      <li class="actual-news__item">
-        <a href="#" class="link _dark">
-          Песков раскрыл детали поездки Путина на свадьбу главы МИД Австрии
-        </a>
-      </li>
-    </ul>
-
-    <div class="actual-news__icon">
-        <a href="#" title="Настроить" class="link _link-icon">
-          <img src="#" class="actual-news__img">
-        </a>
-    </div>
-
-    <div class="actual-news__advert">
-      <div class="actual-news__house">
-        <a href="#" class="link _main">
-          <img src="#" class="actual-news__img">
-        </a>
-      </div>
-      <div class="actual-news__text">
-        0+
-      </div>
-        <a class="link _main-link">
-          <h2 class="actual-news__icon">
-          Сделать Яндекс
-          </h2>
-        </a>
-      <div class="actual-news__text">
-        основным поиском и стартовой страницей
-      </div>
-    </div>
-  </section>
-
-  <section class="search _clearfix">
-    <div class="search__logo">
-      <a href="#" class="link _main-link">
-        <img src="#" class="search__logo-img">
-      </a>
-    </div>
-
-    <nav class="search__nav _main-nav">
-      <ul class="search__list">
-        <li class="search__items">
-          <a href="#" class="link _nav-link">
-            Видео
-          </a>
-        </li>
-        <li class="search__items">
-          <a href="#" class="link _nav-link">
-            Картинки
-          </a>
-        </li>
-        <li class="search__items">
-          <a href="#" class="link _nav-link">
-            Новости
-          </a>
-        </li>
-        <li class="search__items">
-          <a href="#" class="link _nav-link">
-            Карты
-          </a>
-        </li>
-        <li class="search__items">
-          <a href="#" class="link _nav-link">
-            Маркет
-          </a>
-        </li>
-        <li class="search__items">
-          <a href="#" class="link _nav-link">
-            Переводчик
-          </a>
-        </li>
-        <li class="search__items">
-          <a href="#" class="link _nav-link">
-            Музыка
-          </a>
-        </li>
-        <li class="search__items">
-          <a href="#" class="link _nav-link">
-            ещё
-          </a>
-        </li>
-      </ul>
-    </nav>
-
-    <form action="#" method="get" class="search__form">
-      <input type="search" name="question-search" class="search__field">
-      <button type="submit" value="subject-of-search" class="search__button">
-        Найти
-      </button>
-    </form>
-
-    <div class="search__text">
-      <div class="search__example">
-        Найдется все.
-        <a href="#" class="link _pale">Сколько калорий в банане</a>
-      </div>
-      <div class="search__offer">
-        <a class="link">
-          <img class="search__icon">
-          Скачайте Яндекс.Браузер
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section class="advert">
-    <a class="link">
-      <div class="advert__img">
-        <div class="advert__text">
-          Яндекс.Директ
+    <a href="#" class="location">
+        <div class="location__icon"></div>
+        <div class="location__value">
+            Москва
         </div>
-      </div>
-      <div class="advert__content">
-        <span class="advert__title">
-          Откатные ворота для Ваших заборов!
-        </span>
-        <p class="advert__text">
-          Доставка и монтаж. Собственное производство ворот. От 40 тыс.руб за 3 метра.<br> Звоните!
-        </p>
-      </div>
-      <div class="advert__button">
-        Узнать больше
-      </div>
-      <div class="advert__site">
-        moszabory.ru
-      </div>
     </a>
-  </section>
 
-  <section class="info">
-    <div class="info__block _wheather-sites">
-      <div class="info__wheather">
-        <a href="#" class="link _main-link">
-          <h2 class="info__title">
-            Погода
-          </h2>
-        </a>
-        <a href="#" title="облачно с прояснениями" class="link">
-          <div class="info__icon">
-            <img src="#" class="info__img">
-          </div>
-          <div class="info__main-text _degree">
-            +17
-          </div>
-        </a>
-        <div class=info__text">
-          <a href="#" class="link">Ночью +12,</a>
-          <br>
-          <a href="#" class="link">утром +16</a>
-        </div>
-      </div>
-
-      <div class="info__sites">
-        <a href="#" class="link _main-link">
-          <h2 class="info__title">
-            Посещаемое
-          </h2>
-        </a>
-        <ul class="info__list">
-          <li class="info__items">
-            <a href="#" class="link">
-              <span class="info__text">Маркет</span> - духи и туалетная вода
-            </a>
-          </li>
-          <li class="info__items">
-            <a href="#" class="link">
-              <span class="info__text">Авто.ру</span> - как проверить по базам
-            </a>
-          </li>
-          <li class="info__items">
-            <a href="#" class="link">
-              <span class="info__text">Недвижимость</span> - жилье от 60 кв.м
-            </a>
-          </li>
-          <li class="info__items">
-            <a href="#" class="link">
-              <span class="info__text">Район</span> - какая аптека дешевле
-            </a>
-          </li>
-          <li class="info__items">
-            <a href="#" class="link">
-              <span class="info__text">Едадил</span> - узнайте, где дешевле
-            </a>
-          </li>
-          <li class="info__items">
-            <a href="#" class="link">
-              <span class="info__text">Путешествия</span> - туры в Грецию
-            </a>
-          </li>
-          <li class="info__items">
-            <a href="#" class="link">
-              <span class="info__text">Расписания</span> - ж/д билет в Петербург
-            </a>
-          </li>
-					</ul>
-				</div>
+    <div class="settings-link">
+        <a class="link">Настройка</a>
     </div>
 
-    <div class="info__block _traffic-jam-tv">
-      <div class="info__traffic-jam">
-        <a href="#" class="link _main-link">
-          <h2 class="info__title">
-            Пробки
-          </h2>
-        </a>
-        <div class="info__traffic-jam-info">
-          <a class="link">
-            <img class="info__img">
-            <span class="info__main-text">
-              1
-            </span>
-            <span class="info-text">
-              До конца дня дороги свободны
-            </span>
-          </a>
+    <div class="mail-widget _shadow-box">
+        <div class="mail-widget__nav">
+            <div class="mail-widget__email">
+                <a class="link">Почта</a>
+            </div>
+            <div class="mail-widget__registration">
+                <a class="link _default-link">Завести почту</a>
+            </div>
         </div>
-      </div>
-
-      <div class="info__tv">
-        <a href="#" class="link _main-link">
-          <h2 class="info__title">
-            Телепрограмма
-          </h2>
+        <a class="mail-widget__nav _button">
+            Войти в почту
         </a>
-        <a href="#" class="link _main-link">
-          <div class="info__button">
-            ТВ онлайн
-          </div>
-        </a>
-      </div>
-
-      <ul class="info__list">
-        <li class="info__items">
-          21:40
-          <a class="link">Cлед Пятый канал</a>
-        </li>
-        <li class="info__items">
-          21:51
-          <a class="link">Театральный вечер с Юрием ОТР</a>
-        </li>
-        <li class="info__items">
-          22:00
-          <a class="link">Звезды под гипнозом Первый</a>
-        </li>
-        <li class="info__items">
-          22:00
-          <a class="link">Воскресный вечер с… Россия 1</a>
-        </li>
-        <li class="info__items">
-          22:00
-          <a class="link">Вести Россия 24</a>
-        </li>
-        <li class="info__items">
-          22:00
-          <a class="link">Stand Up ТНТ</a>
-        </li>
-      </ul>
+        <div class="mail-widget__nav">
+            <a class="link _extra-link">Получить плюс</a>
+        </div>
+        <!--TODO <div class="mail-widget__link">
+          <a class="link _default">Получить плюс</a>
+        </div>
+        <div class="mail-widget__link">
+          <a class="link _primary">Получить плюс</a>
+        </div>-->
     </div>
 
-    <div class="info__block _map-poster">
-      <div class="info__map">
-        <a href="#" class="link _dark">
-          <h2 class="info__title">
-            Карта Москвы
-          </h2>
-        </a>
-        <ul class="info__list _additional-info">
-          <li class="info__items">
-            <a href="#" class="link _dark">
-              Метро
-            </a>
-          </li>
-          <li class="info__items">
-            <a href="#" class="link _dark">
-              Такси
-            </a>
-          </li>
-          <li class="info__items">
-            <a href="#" class="link _dark">
-              Расписания
-            </a>
-          </li>
-          <li class="info__items">
-            <a href="#" class="link _dark">
-              Сообщество соседей
-            </a>
-          </li>
-        </ul>
-      </div>
+    <a class="dzen-widget _shadow-box">
+        <div class="dzen-widget__top-line">
+            <div class="dzen-widget__title">ADME</div>
+            <div class="dzen-widget__icon"></div>
+        </div>
+        <div class="dzen-widget__text">Люди по всему миру заявляют, что хотят меньше работать, и работодатели нашлись,... </div>
+    </a>
 
-      <div class="info__poster">
-        <a href="#" class="link _main-link">
-          <h2 class="info__title">
-            Афиша
-          </h2>
-        </a>
-        <ul class="info__list">
-          <li class="info__items">
-            <a href="#" class="link _dark">
-              Мег: Монстр глубины
+
+    <section class="news">
+
+        <div class="news__now">
+
+            <div class="news__top-part">
+                <h2 class="news__header h2">
+                    <a href="#" class="link _primary-link">
+                        Сейчас в СМИ
+                    </a>
+                </h2>
+                <a href="#" class="news__location link _extra-link">
+                    в Москве
+                </a>
+                <span class="news__text">
+                    16 августа, четверг
+                </span>
+                <a href="#" class="news__time link _default-link">
+                    20:03
+                </a>
+            </div>
+
+            <ul class="news__list">
+                <li class="news__list-item">
+                    <a href="#" class="link">
+                        Активистку "Нового величия" Анну Павликову выпустили из СИЗО
+                    </a>
+                </li>
+                <li class="news__list-item">
+                    <a href="#" class="link">
+                        В Киеве пригрозили «утопить россиян в крови» при нападении
+                    </a>
+                </li>
+                <li class="news__list-item">
+                    <a href="#" class="link">
+                        Украинский министр анонсировал новые ограничения в сообщении с Россией
+                    </a>
+                </li>
+                <li class="news__list-item">
+                    <a href="#" class="link">
+                        В Детройте умерла «королева соула» Арета Франклин
+                    </a>
+                </li>
+                <li class="news__list-item">
+                    <a href="#" class="link">
+                        Песков раскрыл детали поездки Путина на свадьбу главы МИД Австрии
+                    </a>
+                </li>
+            </ul>
+
+            <a href="#" title="Настроить" class="link">
+                <div class="icon _settings"></div>
             </a>
-            <span class="info__text">
+
+        </div>
+
+
+        <div class="news__advert">
+            <div class="news__image">
+                <a href="#" class="link _primary-link">
+                    <img src="https://avatars.mds.yandex.net/get-banana/26007/x25Bk8OLNM8gBGCFU9jf51Zho_banana_20161021_retina_09.png/optimize" alt="Поиск по умолчанию" class="link__img">
+                </a>
+            </div>
+            <div class="news__text _age">
+                0+
+            </div>
+            <h2 class="h2 _margin-left">
+                <a class="link _primary-link">
+                    Сделать Яндекс
+                </a>
+            </h2>
+            <div class="news__text _usual-text">
+                основным поиском и стартовой страницей
+            </div>
+        </div>
+    </section>
+
+    <section class="search">
+        <div class="search__logo">
+            <a href="#" class="search__logo-link">
+                <img src="//yastatic.net/s3/home/logos/citylogos/ru_flag2018/ru.png" title="День Государственного флага Российской Федерации"  class="search__logo-img">
+            </a>
+        </div>
+
+        <div class="search__block">
+            <nav class="search__nav">
+                <ul class="search__list">
+                    <li class="search__list-item">
+                        <a href="#" class="link search__list-link _primary-link">
+                            Видео
+                        </a>
+                    </li>
+                    <li class="search__list-item">
+                        <a href="#" class="link search__list-link _primary-link">
+                            Картинки
+                        </a>
+                    </li>
+                    <li class="search__list-item">
+                        <a href="#" class="link search__list-link _primary-link">
+                            Новости
+                        </a>
+                    </li>
+                    <li class="search__list-item">
+                        <a href="#" class="link search__list-link _primary-link">
+                            Карты
+                        </a>
+                    </li>
+                    <li class="search__list-item">
+                        <a href="#" class="link search__list-link _primary-link">
+                            Маркет
+                        </a>
+                    </li>
+                    <li class="search__list-item">
+                        <a href="#" class="link search__list-link _primary-link">
+                            Переводчик
+                        </a>
+                    </li>
+                    <li class="search__list-item">
+                        <a href="#" class="link search__list-link _primary-link">
+                            Музыка
+                        </a>
+                    </li>
+                    <li class="search__list-item">
+                        <a href="#" class="link search__list-link _primary-link">
+                            ещё
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <form action="#" method="get" class="search__form">
+                <input type="search" name="question-search" class="search__field">
+                <button type="submit" value="subject-of-search" class="search__button">
+                    Найти
+                </button>
+            </form>
+
+            <div class="search__text">
+                <div class="search__example">
+                    Найдется все.
+                    <a href="#" class="link _default-link">Сколько калорий в банане</a>
+                </div>
+                <a class="link">
+                    <div class="search__offer">
+                        <img src="https://avatars.mds.yandex.net/get-banana/37571/BCLHqbvPDHTyACzbWZjC4c_banana_20141031_dog-red.png/optimize" class="link__icon _search">
+                        Скачайте Яндекс.Браузер
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!--TODO</div>-->
+    </section>
+
+    <section class="advert">
+        <a class="advert__link link">
+            <div class="advert__image">
+                <div class="advert__text">
+                    <a class="link _direct">Яндекс.Директ</a>
+                </div>
+            </div>
+            <div class="advert__content">
+                <span class="advert__title">
+              Откатные ворота для Ваших заборов!
+                </span>
+                <p class="advert__text">
+                        Доставка и монтаж. Собственное производство ворот. От 40 тыс.руб за 3 метра.<br> Звоните!
+                </p>
+            </div>
+            <div class="advert__more-info">
+                <div class="advert__button">
+                    Узнать больше
+                </div>
+                <div class="advert__site">
+                    moszabory.ru
+                </div>
+            </div>
+        </a>
+        <div class="advert__close"></div>
+    </section>
+
+    <div class="layout__row">
+        <div class="layout__col">
+            <div class="widget _wheather">
+                <h2 class="widget__title h2">
+                    <a class="link _primary-link">
+                    Погода
+                    </a>
+                </h2>
+                <div class="widget__content">
+                    <a href="#" title="облачно с прояснениями" class="link">
+                        <div class="link__wheather-icon">
+                        </div>
+                    </a>
+                    <a class="link _big">
+                        +17
+                    </a>
+                    <div class="widget__text">
+                        <a href="#" class="link">Ночью +12,</a>
+                        <br>
+                        <a href="#" class="link">утром +16</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="widget _sites">
+                <h2 class="widget__title">
+                    <a href="#" class="link _primary-link">
+                        Посещаемое
+                    </a>
+                </h2>
+                <ul class="widget__list">
+                    <li class="widget__list-items">
+                        <a href="#" class="link">
+                            <span class="link__text">Маркет</span> - духи и туалетная вода
+                        </a>
+                    </li>
+                    <li class="widget__list-items">
+                        <a href="#" class="link">
+                            <span class="link__text">Авто.ру</span> - как проверить по базам
+                        </a>
+                    </li>
+                    <li class="widget__list-items">
+                        <a href="#" class="link">
+                            <span class="link__text">Недвижимость</span> - жилье от 60 кв.м
+                        </a>
+                    </li>
+                    <li class="widget__list-items">
+                        <a href="#" class="link">
+                            <span class="link__text">Район</span> - какая аптека дешевле
+                        </a>
+                    </li>
+                    <li class="widget__list-items">
+                        <a href="#" class="link">
+                            <span class="link__text">Едадил</span> - узнайте, где дешевле
+                        </a>
+                    </li>
+                    <li class="widget__list-items">
+                        <a href="#" class="link">
+                            <span class="link__text">Путешествия</span> - туры в Грецию
+                        </a>
+                    </li>
+                    <li class="widget__list-items">
+                        <a href="#" class="link">
+                            <span class="link__text">Расписания</span> - ж/д билет в Петербург
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="layout__col">
+
+            <div class="widget _traffic-jam">
+                <h2 class="widget__title h2">
+                    <a class="link _primary-link">
+                        Пробки
+                    </a>
+                </h2>
+                <div class="widget__traffic-content">
+                <a href="#" class="link">
+                    <div class="link__light-icon">
+
+                    </div>
+                </a>
+                <a class="link _big">
+                    0
+                </a>
+                <div class="widget__text">
+                    <a href="#" class="link">
+                        На дорогах свободно
+                    </a>
+                </div>
+                </div>
+        </div>
+        <div class="widget__tv">
+                <h2 class="widget__title h2">
+                    <a class="link _primary-link">
+                        Телепрограмма
+                    </a>
+                </h2>
+                <ul class="widget__list">
+                    <li class="widget__list-items">
+                        <span class=" widget__tv-time">21:40</span>
+                        <a class="link">Cлед <span class="widget__tv-chanels">Пятый канал</span></a>
+                    </li>
+                    <li class="widget__list-items">
+                        <span class=" widget__tv-time">21:51</span>
+                        <a class="link">Театральный вечер с Юрием <span class="widget__tv-chanels">ОТР</span></a>
+                    </li>
+                    <li class="widget__list-items">
+                        <span class=" widget__tv-time">22:00</span>
+                        <a class="link">Звезды под гипнозом <span class="widget__tv-chanels">Первый</span></a>
+                    </li>
+                    <li class="widget__list-items">
+                        <span class=" widget__tv-time">22:00</span>
+                        <a class="link">Воскресный вечер с… <span class="widget__tv-chanels">Россия 1</span></a>
+                    </li>
+                <li class="widget__list-items">
+                    <span class=" widget__tv-time">22:00</span>
+                    <a class="link">Вести <span class="widget__tv-chanels">Россия 24</span></a>
+                </li>
+                <li class="widget__list-items">
+                    <span class=" widget__tv-time">22:00</span>
+                        <a class="link">Stand Up <span class="widget__tv-chanels">ТНТ</span></a>
+                </li>
+            </ul>
+            </div>
+        </div>
+
+        <div class="layout__col">
+            <div class="widget__map">
+                <h2 class="widget__title h2">
+                    <a class="link _primary-link">
+                        Карта Москвы
+                    </a>
+                </h2>
+                <ul class="widget__list-map">
+                    <li class="widget__list-map-items">
+                        <a href="#" class="link">
+                            Метро
+                        </a>
+                    </li>
+                    <li class="widget__list-map-items">
+                        <a href="#" class="link">
+                            Такси
+                        </a>
+                    </li>
+                    <li class="widget__list-map-items">
+                        <a href="#" class="link">
+                            Расписания
+                        </a>
+                    </li>
+                    <li class="widget__list-map-items">
+                        <a href="#" class="link">
+                            Сообщество соседей
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="widget__poster">
+                <h2 class="widget__title h2">
+                    <a class="link _primary-link">
+                        Афиша
+                    </a>
+                </h2>
+                <ul class="widget__list">
+                        <li class="widget__list-items">
+                            <a href="#" class="link">
+                                Мег: Монстр глубины
+                            </a>
+                            <span class="widget__usual-text">
               ужасы
             </span>
-          </li>
-          <li class="info__items">
-            <a href="#" class="link _dark">
-              Mamma Mia! 2
-            </a>
-            <span class="info__text">
+                        </li>
+                        <li class="widget__list-items">
+                            <a href="#" class="link">
+                                Mamma Mia! 2
+                            </a>
+                            <span class="widget__usual-text">
               премьера
             </span>
-          </li>
-          <li class="info__items">
-            <a href="#" class="link _dark">
-              Шпион, который меня кинул
-            </a>
-            <span class="info__text">
+                        </li>
+                        <li class="widget__list-items">
+                            <a href="#" class="link">
+                                Шпион, который меня кинул
+                            </a>
+                            <span class="widget__usual-text">
               боевик
             </span>
-          </li>
-          <li class="info__items">
-            <a href="#" class="link _dark">
-              Кристофер Робин
-            </a>
-            <span class="info__text">
+                        </li>
+                        <li class="widget__list-items">
+                            <a href="#" class="link">
+                                Кристофер Робин
+                            </a>
+                            <span class="widget__usual-text">
                приключения
             </span>
-          </li>
-          <li class="info__items">
-            <a href="#" class="link _dark">
-              Аксель
-            </a>
-            <span class="info__text">
+                        </li>
+                        <li class="widget__list-items">
+                            <a href="#" class="link">
+                                Аксель
+                            </a>
+                            <span class="widget__usual-text">
+              премьера
+                            </span>
+                        </li>
+                        <li class="widget__list-items">
+                            <a href="#" class="link">
+                                Концерты — Twenty One Pilots — The Bandito Tour
+                            </a>
+                        </li>
+
+                    </ul>
+            </div>
+        </div>
+
+    </div>
+
+  <!--TODO  <section class="info">
+        <div class="info__block _wheather-sites">
+
+            <div class="info__wheather">
+                <a href="#" class="link _main-link">
+                    <h2 class="info__title">
+                        Погода
+                    </h2>
+                </a>
+                <a href="#" title="облачно с прояснениями" class="link">
+                    <div class="info__icon">
+                        <img src="#" class="info__img">
+                    </div>
+                    <div class="info__main-text _degree">
+                        +17
+                    </div>
+                </a>
+                <div class=info__text">
+                    <a href="#" class="link">Ночью +12,</a>
+                    <br>
+                    <a href="#" class="link">утром +16</a>
+                </div>
+
+                <div class="info__sites">
+                    <h2 class="info__title">
+                        <a href="#" class="link _primary-link">
+                            Посещаемое
+                        </a>
+                    </h2>
+                    <ul class="info__list">
+                        <li class="info__list-items">
+                            <a href="#" class="link">
+                                <span class="link__text">Маркет</span> - духи и туалетная вода
+                            </a>
+                        </li>
+                        <li class="info__list-items">
+                            <a href="#" class="link">
+                                <span class="link__text">Авто.ру</span> - как проверить по базам
+                            </a>
+                        </li>
+                        <li class="info__list-items">
+                            <a href="#" class="link">
+                                <span class="link__text">Недвижимость</span> - жилье от 60 кв.м
+                            </a>
+                        </li>
+                        <li class="info__list-items">
+                            <a href="#" class="link">
+                                <span class="link__text">Район</span> - какая аптека дешевле
+                            </a>
+                        </li>
+                        <li class="info__list-items">
+                            <a href="#" class="link">
+                                <span class="link__text">Едадил</span> - узнайте, где дешевле
+                            </a>
+                        </li>
+                        <li class="info__list-items">
+                            <a href="#" class="link">
+                                <span class="link__text">Путешествия</span> - туры в Грецию
+                            </a>
+                        </li>
+                        <li class="info__list-items">
+                            <a href="#" class="link">
+                                <span class="link__text">Расписания</span> - ж/д билет в Петербург
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+-->
+
+  <!--TODO          <div class="info__sites">
+                <a href="#" class="link _main-link">
+                    <h2 class="info__title">
+                        Посещаемое
+                    </h2>
+                </a>
+                <ul class="info__list">
+                    <li class="info__items">
+                        <a href="#" class="link">
+                            <span class="info__text">Маркет</span> - духи и туалетная вода
+                        </a>
+                    </li>
+                    <li class="info__items">
+                        <a href="#" class="link">
+                            <span class="info__text">Авто.ру</span> - как проверить по базам
+                        </a>
+                    </li>
+                    <li class="info__items">
+                        <a href="#" class="link">
+                            <span class="info__text">Недвижимость</span> - жилье от 60 кв.м
+                        </a>
+                    </li>
+                    <li class="info__items">
+                        <a href="#" class="link">
+                            <span class="info__text">Район</span> - какая аптека дешевле
+                        </a>
+                    </li>
+                    <li class="info__items">
+                        <a href="#" class="link">
+                            <span class="info__text">Едадил</span> - узнайте, где дешевле
+                        </a>
+                    </li>
+                    <li class="info__items">
+                        <a href="#" class="link">
+                            <span class="info__text">Путешествия</span> - туры в Грецию
+                        </a>
+                    </li>
+                    <li class="info__items">
+                        <a href="#" class="link">
+                            <span class="info__text">Расписания</span> - ж/д билет в Петербург
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        -->
+
+     <!--TODO   <div class="info__block _traffic-jam-tv">
+            <div class="info__traffic-jam">
+                <a href="#" class="link _main-link">
+                    <h2 class="info__title">
+                        Пробки
+                    </h2>
+                </a>
+                <div class="info__traffic-jam-info">
+                    <a class="link">
+                        <img class="info__img">
+                        <span class="info__main-text">
+              1
+            </span>
+                        <span class="info-text">
+              До конца дня дороги свободны
+            </span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="info__tv">
+                <a href="#" class="link _main-link">
+                    <h2 class="info__title">
+                        Телепрограмма
+                    </h2>
+                </a>
+                <a href="#" class="link _main-link">
+                    <div class="info__button">
+                        ТВ онлайн
+                    </div>
+                </a>
+            </div>
+
+            <ul class="info__list">
+                <li class="info__items">
+                    21:40
+                    <a class="link">Cлед Пятый канал</a>
+                </li>
+                <li class="info__items">
+                    21:51
+                    <a class="link">Театральный вечер с Юрием ОТР</a>
+                </li>
+                <li class="info__items">
+                    22:00
+                    <a class="link">Звезды под гипнозом Первый</a>
+                </li>
+                <li class="info__items">
+                    22:00
+                    <a class="link">Воскресный вечер с… Россия 1</a>
+                </li>
+                <li class="info__items">
+                    22:00
+                    <a class="link">Вести Россия 24</a>
+                </li>
+                <li class="info__items">
+                    22:00
+                    <a class="link">Stand Up ТНТ</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="info__block _map-poster">
+            <div class="info__map">
+                <a href="#" class="link">
+                    <h2 class="info__title">
+                        Карта Москвы
+                    </h2>
+                </a>
+                <ul class="info__list _additional-info">
+                    <li class="info__items">
+                        <a href="#" class="link">
+                            Метро
+                        </a>
+                    </li>
+                    <li class="info__items">
+                        <a href="#" class="link">
+                            Такси
+                        </a>
+                    </li>
+                    <li class="info__items">
+                        <a href="#" class="link">
+                            Расписания
+                        </a>
+                    </li>
+                    <li class="info__items">
+                        <a href="#" class="link">
+                            Сообщество соседей
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="info__poster">
+                <a href="#" class="link _main-link">
+                    <h2 class="info__title">
+                        Афиша
+                    </h2>
+                </a>
+                <ul class="info__list">
+                    <li class="info__items">
+                        <a href="#" class="link">
+                            Мег: Монстр глубины
+                        </a>
+                        <span class="info__text">
+              ужасы
+            </span>
+                    </li>
+                    <li class="info__items">
+                        <a href="#" class="link">
+                            Mamma Mia! 2
+                        </a>
+                        <span class="info__text">
               премьера
             </span>
-          </li>
-          <li class="info__items">
-            <a href="#" class="link _dark">
-              Концерты — Twenty One Pilots — The Bandito Tour
-            </a>
-          </li>
+                    </li>
+                    <li class="info__items">
+                        <a href="#" class="link">
+                            Шпион, который меня кинул
+                        </a>
+                        <span class="info__text">
+              боевик
+            </span>
+                    </li>
+                    <li class="info__items">
+                        <a href="#" class="link">
+                            Кристофер Робин
+                        </a>
+                        <span class="info__text">
+               приключения
+            </span>
+                    </li>
+                    <li class="info__items">
+                        <a href="#" class="link">
+                            Аксель
+                        </a>
+                        <span class="info__text">
+              премьера
+            </span>
+                    </li>
+                    <li class="info__items">
+                        <a href="#" class="link">
+                            Концерты — Twenty One Pilots — The Bandito Tour
+                        </a>
+                    </li>
 
-					</ul>
-				</div>
-    </div>
-  </section>
+                </ul>
+            </div>
+        </div>
+    </section>
+    -->
 
 </main>
 </body>
