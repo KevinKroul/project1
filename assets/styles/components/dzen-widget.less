@@ -2,14 +2,26 @@
   display: flex;
   position: absolute;
   top: 141px;
+  right: 12px;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  right: 14px;
+  padding: 12px 14px;
   width: 180px;
   height: 103px;
   font-size: 12px;
   cursor: pointer;
+  transition: transform 0.2s ease-in;
+
+  &._shadow-box {
+    box-shadow: 0 0 2px 0 rgba(0,0,0,.1),
+    0 2px 6px 0 rgba(0,0,0,.1);
+    width: 152px;
+  }
+
+  &:hover {
+    transform: translateX(-50px);
+  }
 
   &__top-line {
     display: flex;
@@ -35,4 +47,5 @@
     width: 152px;
   }
 }
+
 

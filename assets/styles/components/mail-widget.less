@@ -1,54 +1,67 @@
 .mail-widget {
     display: flex;
-  position: absolute;
-  top: 11px;
-  right: 14px;
+    position: absolute;
+    top: 12px;
+    right: 12px;
     flex-direction: column;
     justify-content: flex-start;
     flex-wrap: nowrap;
     align-items: center;
-  width: 180px;
-  height: 120px;
-  font-size: 12px;
+    padding: 12px 14px;
+    width: 152px;
+    height: 96.6px;
+    font-size: 12px;
 
     &__nav {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        height: 45px;
+        height: 32.2px;
         width: 152px;
     }
 
     &__nav:first-child {
-        justify-content: space-between;
+         position: relative;
+         justify-content: flex-start;
+         align-items: flex-start;
+     }
+
+    &__nav:nth-child(2){
+        padding-top: 7px;
+        padding-bottom: 8px;
+        height: 15.2px;
+        background-color: #e5e5e5;
+        border-radius: 3px;
+        cursor: pointer;
     }
 
-    &__email {
-        height: 15px;
+    &__nav:last-child {
+        padding-top: 14px;
+        padding-bottom: 4px;
+        height: 14.2px;
+    }
+
+    &__nav:nth-child(2):hover {
+        background-color: #dedede;
+    }
+
+    &__registration {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    &._shadow-box {
+        box-shadow: 0 0 2px 0 rgba(0,0,0,.1),
+                    0 2px 6px 0 rgba(0,0,0,.1);
+        width: 152px;
+    }
+
+
+    &._button:hover {
+        background-color: #dedede;
     }
 
 }
 
-._button {
-    display: inline-block;
-    text-align: center;
-    height: 30px;
-    width: 152px;
-    line-height: 30px;
-    font-family: 'YS Text', Arial, Helvetica, sans-serif;
-    font-size: 12px;
-    background-color: #e5e5e5;
-    border-radius: 3px;
-    cursor: pointer;
-}
-
-._shadow-box {
-    box-shadow: 0 0 2px 0 rgba(0,0,0,.1),
-    0 2px 6px 0 rgba(0,0,0,.1);
-    width: 180px;
-}
-
-._button:hover {
-  background-color: #dedede;
-}

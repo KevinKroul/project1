@@ -5,6 +5,7 @@
   "main": "Gulpfile.js",
   "scripts": {
     "start": "gulp",
+    "svg": "gulp svg",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,11 +18,17 @@
     "url": "https://github.com/KevinKroul/project1/issues"
   },
   "homepage": "https://github.com/KevinKroul/project1#readme",
-  "dependencies": {},
+  "dependencies": {
+    "gulp-inject": "^4.3.2",
+    "gulp-rename": "^1.4.0",
+    "gulp-svgmin": "^1.2.4",
+    "gulp-svgstore": "^6.1.1"
+  },
   "devDependencies": {
     "browser-sync": "^2.24.2",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^5.0.0",
-    "gulp-less": "^4.0.1"
+    "gulp-less": "^4.0.1",
+    "gulp-svg-sprite": "^1.4.0"
   }
 }
