@@ -1,13 +1,23 @@
 .advert {
-    display: flex;
     position: relative;
-    flex-direction: row; 
-    justify-content: flex-start;
-    align-content: center;
-    flex-wrap: nowrap;
-    height: 90px;
+    padding-left: 36px;
+    height: 108px;
+    min-width: 900px;
     font-size: 12px;
-    background-color: #f5f5f5;
+
+    &__content-block {
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-content: center;
+        flex-wrap: nowrap;
+        height: 90px;
+        width: 760px;
+        background-color: #f5f5f5;
+    }
 
     &__link:hover {
         cursor: pointer;
@@ -19,8 +29,9 @@
     }
 
     &__content {
-        width: 290px;
         padding: 16px;
+        margin-bottom: 0;
+        width: 330px;
     }
 
     &__title {
@@ -33,7 +44,6 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-right: 18px;
     }
 
     &__button {
@@ -67,8 +77,12 @@
     }
 
     &__close {
+        position: absolute;
+        top: 0;
+        right: 0;
         width: 16px;
         height: 16px;
         background: url(//yastatic.net/www/_/R/6/NrxzASAPi9QSmGS6qAwJt-XRA.svg) center center #fff no-repeat;
+        background-color: #f5f5f5;
     }
 }
