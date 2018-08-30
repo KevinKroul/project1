@@ -1,7 +1,3 @@
-<!--
-https://css-tricks.com/snippets/css/a-guide-to-flexbox/
--->
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -15,8 +11,14 @@ https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 <body>
 
 <main class="layout">
+
     <a href="#" class="location">
-        <div class="location__icon"></div>
+        <div class="location__icon">
+            <svg class="location__svg" width="0" height="0">
+                <path class="location__svg-path" d='m15 4l-11.9 5.3 5.8 0.8 0.5 5.5 5.6-11.6z'>
+                </path>
+            </svg>
+        </div>
         <div class="location__value">
             Москва
         </div>
@@ -32,14 +34,14 @@ https://css-tricks.com/snippets/css/a-guide-to-flexbox/
                 <a class="link">Почта</a>
             </div>
             <div class="mail-widget__registration">
-                <a class="link _invisible-link">Завести почту</a>
+                <a class="link _invisible">Завести почту</a>
             </div>
         </div>
         <a class="mail-widget__nav">
             Войти в почту
         </a>
         <div class="mail-widget__nav">
-            <a class="link _extra-link">Получить плюс</a>
+            <a class="link _extra">Получить плюс</a>
         </div>
     </div>
 
@@ -47,16 +49,12 @@ https://css-tricks.com/snippets/css/a-guide-to-flexbox/
         <a class="dzen-widget__adme _shadow-box">
             <div class="dzen-widget__title">ADME</div>
             <div class="dzen-widget__icon"></div>
-            <div class="dzen-widget__text">Люди по всему миру заявляют, что хотят меньше работать, и работодатели нашлись,...
+            <div class="dzen-widget__text">Люди по всему миру заявляют, что хотят меньше работать, и работодатели
+                нашлись,...
             </div>
         </a>
-        <a class="dzen-widget__options" alt="Опции">
-            <img class="dzen-widget__icon-dots">
+        <a class="dzen-widget__options" title="Опции">
         </a>
-        <!-- TODO <div class="popup">
-            <span class="popup__close">Закрыть</span>
-            <span class="popup__close">Не показывать</span>
-        </div>-->
     </div>
 
 
@@ -64,21 +62,24 @@ https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
         <div class="news__now">
 
-            <a href="#" title="Настроить" class="news__link link">
-                <div class="news__icon"></div>
+            <a href="#" title="Настроить" class="news__icon link">
+                <svg class="news__svg" width="0" height="0">
+                    <use href="#icon-settings" class="news__svg-path">
+                    </use>
+                </svg>
             </a>
 
             <div class="news__top-part">
-                <a href="#" class="link _basic-link">
-                        Сейчас в СМИ
+                <a href="#" class="link _primary">
+                    Сейчас в СМИ
                 </a>
-                <a href="#" class="news__location link _extra-link">
+                <a href="#" class="news__location link _extra">
                     в Москве
                 </a>
                 <span class="news__text">
                     16 августа, четверг
                 </span>
-                <a href="#" class="news__time link _invisible-link">
+                <a href="#" class="news__time link _invisible">
                     20:03
                 </a>
             </div>
@@ -116,16 +117,14 @@ https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
         <div class="news__advert">
 
-            <a href="#" class="news__link link">
-                <div class="news__image">
-                </div>
+            <a href="#" class="news__image link">
             </a>
 
             <div class="news__text _age">
                 0+
             </div>
             <h2 class="news__h2">
-                <a class="link _basic-link">
+                <a class="link _primary">
                     Сделать Яндекс
                 </a>
             </h2>
@@ -138,7 +137,8 @@ https://css-tricks.com/snippets/css/a-guide-to-flexbox/
     <section class="search">
         <div class="search__logo">
             <a href="#" class="search__logo-link">
-                <img src="//yastatic.net/s3/home/logos/citylogos/ru_flag2018/ru.png" title="День Государственного флага Российской Федерации"  class="search__logo-image">
+                <img src="//yastatic.net/s3/home/logos/citylogos/ru_flag2018/ru.png"
+                     title="День Государственного флага Российской Федерации" class="search__logo-image">
             </a>
         </div>
 
@@ -189,11 +189,13 @@ https://css-tricks.com/snippets/css/a-guide-to-flexbox/
             </nav>
 
             <form action="#" method="get" class="search__form">
-                <input type="search" name="question-search" class="search__field">
-                <button type="submit" value="subject-of-search" class="search__button">
-                    Найти
+                <div class="search__icon-field">
                     <div class="search__icon-microphone"></div>
                     <div class="search__icon-keyboard"></div>
+                    <input type="search" name="question-search" class="search__field">
+                </div>
+                <button type="submit" value="subject-of-search" class="search__button">
+                    Найти
                 </button>
 
             </form>
@@ -201,11 +203,13 @@ https://css-tricks.com/snippets/css/a-guide-to-flexbox/
             <div class="search__text">
                 <div class="search__example">
                     Найдется все.
-                    <a href="#" class="link _invisible-link">Сколько калорий в банане</a>
+                    <a href="#" class="link _invisible">Сколько калорий в банане</a>
                 </div>
-                <a class="search__link link">
+                <a class="search__link">
                     <div class="search__offer">
-                        <img src="https://avatars.mds.yandex.net/get-banana/37571/BCLHqbvPDHTyACzbWZjC4c_banana_20141031_dog-red.png/optimize" class="search__icon">
+                        <img
+                            src="https://avatars.mds.yandex.net/get-banana/37571/BCLHqbvPDHTyACzbWZjC4c_banana_20141031_dog-red.png/optimize"
+                            class="search__icon">
                         Скачайте Яндекс.Браузер
                     </div>
                 </a>
@@ -214,40 +218,47 @@ https://css-tricks.com/snippets/css/a-guide-to-flexbox/
     </section>
 
     <section class="advert">
-        <a class="advert__link link">
-            <div class="advert__content-block">
-                <div class="advert__image">
-                    <div class="advert__text">
-                        <a class="link _direct">Яндекс.Директ</a>
-                    </div>
-                </div>
-                <div class="advert__content">
+        <div class="advert__content-block">
+            <a class="advert__link">
+            </a>
+            <div class="advert__image">
+            </div>
+            <div class="advert__text">
+                <a class="advert__direct">Яндекс.Директ</a>
+            </div>
+            <div class="advert__content">
                     <span class="advert__title">
                   Откатные ворота для Ваших заборов!
                     </span>
-                    <p class="advert__text">
-                            Доставка и монтаж. Собственное производство ворот. От 40 тыс.руб за 3 метра.<br> Звоните!
-                    </p>
-                </div>
-                <div class="advert__more-info">
-                    <div class="advert__button">
-                        Узнать больше
-                    </div>
-                    <div class="advert__site">
-                        moszabory.ru
-                    </div>
-                </div>
-                <div class="advert__close"></div>
+                <p class="advert__text">
+                    Доставка и монтаж. Собственное производство ворот. От 40 тыс.р за 3 метра.<br> Звоните!
+                </p>
             </div>
-        </a>
+            <div class="advert__more-info">
+                <div class="advert__button">
+                    Узнать больше
+                </div>
+                <div class="advert__site">
+                    moszabory.ru
+                </div>
+            </div>
+            <a class="advert__close" title="Скрыть объявление"></a>
+
+        </div>
     </section>
 
     <div class="layout__row">
         <div class="layout__col">
             <div class="widget _wheather">
+                <a href="#" title="Настроить" class="widget__icon">
+                    <svg class="widget__svg" width="0" height="0">
+                        <use href="#icon-settings" class="widget__svg-path">
+                        </use>
+                    </svg>
+                </a>
                 <h2 class="widget__title h2">
-                    <a class="link _basic-link">
-                    Погода
+                    <a class="link _primary">
+                        Погода
                     </a>
                 </h2>
                 <div class="widget__content">
@@ -255,9 +266,11 @@ https://css-tricks.com/snippets/css/a-guide-to-flexbox/
                         <div class="link__wheather-icon">
                         </div>
                     </a>
-                    <a class="link _big">
+
+                    <a class="link _quantity">
                         +17
                     </a>
+
                     <div class="widget__text">
                         <a href="#" class="link">Ночью +12,</a>
                         <br>
@@ -267,17 +280,18 @@ https://css-tricks.com/snippets/css/a-guide-to-flexbox/
             </div>
 
             <div class="widget _sites">
-                <h2 class="widget__title">
-                    <a href="#" class="link _basic-link">
+                <a href="#" title="Настроить" class="widget__icon">
+                    <svg class="widget__svg" width="0" height="0">
+                        <use href="#icon-settings" class="widget__svg-path">
+                        </use>
+                    </svg>
+                </a>
+                <h2 class="widget__title h2">
+                    <a href="#" class="link _primary">
                         Посещаемое
                     </a>
                 </h2>
                 <ul class="widget__list">
-                    <li class="widget__list-items">
-                        <a href="#" class="link">
-                            <span class="link__text">Маркет</span> - духи и туалетная вода
-                        </a>
-                    </li>
                     <li class="widget__list-items">
                         <a href="#" class="link">
                             <span class="link__text">Авто.ру</span> - как проверить по базам
@@ -316,66 +330,127 @@ https://css-tricks.com/snippets/css/a-guide-to-flexbox/
         <div class="layout__col">
 
             <div class="widget _traffic-jam">
+                <a href="#" title="Настроить" class="widget__icon">
+                    <svg class="widget__svg" width="0" height="0">
+                        <use href="#icon-settings" class="widget__svg-path">
+                        </use>
+                    </svg>
+                </a>
                 <h2 class="widget__title h2">
-                    <a class="link _basic-link">
+                    <a class="link _primary">
                         Пробки
                     </a>
                 </h2>
                 <div class="widget__traffic-content">
-                <a href="#" class="link">
-                    <div class="link__light-icon">
-
-                    </div>
-                </a>
-                <a class="link _big">
-                    0
-                </a>
-                <div class="widget__text">
                     <a href="#" class="link">
-                        На дорогах свободно
+                        <div class="link__light-icon">
+                        </div>
                     </a>
+                    <a class="link _quantity">
+                        0
+                    </a>
+                    <div class="widget__text">
+                        <a href="#" class="link">
+                            На дорогах свободно
+                        </a>
+                    </div>
                 </div>
-                </div>
-        </div>
-        <div class="widget _tv">
+            </div>
+            <div class="widget _tv">
+                <a class="widget__tv-button">
+                    <div class="widget__triangle"></div>
+                    ТВ онлайн
+                </a>
+                <a href="#" title="Настроить" class="widget__icon">
+                    <svg class="widget__svg" width="0" height="0">
+                        <use href="#icon-settings" class="widget__svg-path">
+                        </use>
+                    </svg>
+                </a>
                 <h2 class="widget__title h2">
-                    <a class="link _basic-link">
+                    <a class="link _primary">
                         Телепрограмма
                     </a>
                 </h2>
                 <ul class="widget__list">
                     <li class="widget__list-items">
-                        <span class=" widget__tv-time">21:40</span>
-                        <a class="link">Cлед <span class="widget__tv-chanels">Пятый канал</span></a>
+                        <span class=" widget__time">
+                            21:40
+                        </span>
+                        <a class="widget__tv-program link">
+                            Cлед
+                            <a class="link _invisible">
+                                Пятый канал
+                            </a>
+                        </a>
                     </li>
                     <li class="widget__list-items">
-                        <span class=" widget__tv-time">21:51</span>
-                        <a class="link">Театральный вечер с Юрием <span class="widget__tv-chanels">ОТР</span></a>
+                        <span class=" widget__time">21:51</span>
+                        <a class="widget__tv-program link">
+                            Театральный вечер с Юрием
+                            <a class="link _invisible">
+                                ОТР
+                            </a>
+                        </a>
                     </li>
                     <li class="widget__list-items">
-                        <span class=" widget__tv-time">22:00</span>
-                        <a class="link">Звезды под гипнозом <span class="widget__tv-chanels">Первый</span></a>
+                        <span class=" widget__time">
+                            22:00
+                        </span>
+                        <a class="widget__tv-program">
+                            Звезды под гипнозом
+                            <a class="link _invisible">
+                                Первый
+                            </a>
+                        </a>
                     </li>
                     <li class="widget__list-items">
-                        <span class=" widget__tv-time">22:00</span>
-                        <a class="link">Воскресный вечер с… <span class="widget__tv-chanels">Россия 1</span></a>
+                        <span class=" widget__time">
+                            22:00
+                        </span>
+                        <a class="widget__tv-program link">
+                            Воскресный вечер с…
+                            <a class="link _invisible">
+                                Россия 1
+                            </a>
+                        </a>
                     </li>
-                <li class="widget__list-items">
-                    <span class=" widget__tv-time">22:00</span>
-                    <a class="link">Вести <span class="widget__tv-chanels">Россия 24</span></a>
-                </li>
-                <li class="widget__list-items">
-                    <span class=" widget__tv-time">22:00</span>
-                        <a class="link">Stand Up <span class="widget__tv-chanels">ТНТ</span></a>
-                </li>
-            </ul>
+                    <li class="widget__list-items">
+                        <span class=" widget__time">
+                            22:00
+                        </span>
+                        <a class="widget__tv-program link">
+                            Вести
+                            <a class="link _invisible">
+                                Россия 24
+                            </a>
+                        </a>
+                    </li>
+                    <li class="widget__list-items">
+                        <span class=" widget__time">
+                            22:00
+                        </span>
+                        <a class="widget__tv-program link">
+                            Stand Up
+                            <a class="link _invisible">
+                                ТНТ
+                            </a>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
 
         <div class="layout__col">
             <div class="widget _map">
+                <a href="#" title="Настроить" class="widget__icon link">
+                    <svg class="widget__svg" width="0" height="0">
+                        <use href="#icon-map" class="widget__svg-path">
+                        </use>
+                    </svg>
+                </a>
                 <h2 class="widget__title h2">
-                    <a class="link _basic-link">
+                    <a class="link _primary">
                         Карта Москвы
                     </a>
                 </h2>
@@ -405,58 +480,58 @@ https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
             <div class="widget _poster">
                 <h2 class="widget__title h2">
-                    <a class="link _basic-link">
+                    <a class="link _primary">
                         Афиша
                     </a>
                 </h2>
                 <ul class="widget__list">
-                        <li class="widget__list-items">
-                            <a href="#" class="link">
-                                Мег: Монстр глубины
-                            </a>
-                            <span class="widget__usual-text">
+                    <li class="widget__list-items">
+                        <a href="#" class="link">
+                            Мег: Монстр глубины
+                        </a>
+                        <span class="widget__usual-text">
               ужасы
             </span>
-                        </li>
-                        <li class="widget__list-items">
-                            <a href="#" class="link">
-                                Mamma Mia! 2
-                            </a>
-                            <span class="widget__usual-text">
+                    </li>
+                    <li class="widget__list-items">
+                        <a href="#" class="link">
+                            Mamma Mia! 2
+                        </a>
+                        <span class="widget__usual-text">
               премьера
             </span>
-                        </li>
-                        <li class="widget__list-items">
-                            <a href="#" class="link">
-                                Шпион, который меня кинул
-                            </a>
-                            <span class="widget__usual-text">
+                    </li>
+                    <li class="widget__list-items">
+                        <a href="#" class="link">
+                            Шпион, который меня кинул
+                        </a>
+                        <span class="widget__usual-text">
               боевик
             </span>
-                        </li>
-                        <li class="widget__list-items">
-                            <a href="#" class="link">
-                                Кристофер Робин
-                            </a>
-                            <span class="widget__usual-text">
+                    </li>
+                    <li class="widget__list-items">
+                        <a href="#" class="link">
+                            Кристофер Робин
+                        </a>
+                        <span class="widget__usual-text">
                приключения
             </span>
-                        </li>
-                        <li class="widget__list-items">
-                            <a href="#" class="link">
-                                Аксель
-                            </a>
-                            <span class="widget__usual-text">
+                    </li>
+                    <li class="widget__list-items">
+                        <a href="#" class="link">
+                            Аксель
+                        </a>
+                        <span class="widget__usual-text">
               премьера
                             </span>
-                        </li>
-                        <li class="widget__list-items">
-                            <a href="#" class="link">
-                                Концерты — Twenty One Pilots — The Bandito Tour
-                            </a>
-                        </li>
+                    </li>
+                    <li class="widget__list-items">
+                        <a href="#" class="link">
+                            Концерты — Twenty One Pilots — The Bandito Tour
+                        </a>
+                    </li>
 
-                    </ul>
+                </ul>
             </div>
         </div>
 
@@ -465,7 +540,33 @@ https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 </main>
 
 
-<!-- inject:svg --><svg xmlns="http://www.w3.org/2000/svg"><symbol id="icon-check" viewBox="0 0 20 20"><path d="M8.294 16.998c-.435 0-.847-.203-1.111-.553L3.61 11.724a1.392 1.392 0 0 1 .27-1.951 1.392 1.392 0 0 1 1.953.27l2.351 3.104 5.911-9.492a1.396 1.396 0 0 1 1.921-.445c.653.406.854 1.266.446 1.92L9.478 16.34a1.39 1.39 0 0 1-1.12.656c-.022.002-.042.002-.064.002z"/></symbol><symbol id="icon-check1" viewBox="0 0 20 20"><path d="M8.294 16.998c-.435 0-.847-.203-1.111-.553L3.61 11.724a1.392 1.392 0 0 1 .27-1.951 1.392 1.392 0 0 1 1.953.27l2.351 3.104 5.911-9.492a1.396 1.396 0 0 1 1.921-.445c.653.406.854 1.266.446 1.92L9.478 16.34a1.39 1.39 0 0 1-1.12.656c-.022.002-.042.002-.064.002z"/></symbol></svg><!-- endinject -->
+<!-- inject:svg -->
+<svg xmlns="http://www.w3.org/2000/svg">
+    <symbol id="icon-check" viewBox="0 0 20 20">
+        <path
+            d="M8.294 16.998c-.435 0-.847-.203-1.111-.553L3.61 11.724a1.392 1.392 0 0 1 .27-1.951 1.392 1.392 0 0 1 1.953.27l2.351 3.104 5.911-9.492a1.396 1.396 0 0 1 1.921-.445c.653.406.854 1.266.446 1.92L9.478 16.34a1.39 1.39 0 0 1-1.12.656c-.022.002-.042.002-.064.002z"/>
+    </symbol>
+    <symbol id="icon-light" viewBox="0 0 33 30">
+        <path
+            d="M28.833 17.404c.027-.37 0-1.506 0-1.882 0-8.254-6.681-14.945-14.922-14.945-4.065 0-7.717 1.661-10.44 4.265C1.024 7.18 0 10.579 0 12.962c0 3.046 1.89 4.442 3.466 4.442h25.367z"/>
+        <path
+            d="M33 15c0 7.965-6.458 14.423-14.423 14.423-7.964 0-14.422-6.458-14.422-14.423C4.155 7.034 10.613.577 18.577.577 26.542.577 33 7.034 33 15z"/>
+        <path
+            d="M18.323.58l.254-.003C26.542.577 33 7.034 33 15c0 .572-.034 1.137-.099 1.692-2.3-.014-4.073-.994-4.653-3.75-1.092-5.193-4.832-9.635-9.904-11.474a15.41 15.41 0 0 0-2.452-.642h.003a15.791 15.791 0 0 0-2.51-.246h4.938z"/>
+    </symbol>
+    <symbol id="icon-map" viewBox="0 0 21 21">
+        <path opacity=".4" fill-rule="evenodd" clip-rule="evenodd" d="M5.4 10.88l8.97-4.205-4.207 9.016-.6-4.206"/>
+        <path opacity=".4"
+              d="M10.5 3c4.136 0 7.5 3.364 7.5 7.5S14.636 18 10.5 18 3 14.636 3 10.5 6.364 3 10.5 3m0-1a8.5 8.5 0 1 0 .001 17.001A8.5 8.5 0 0 0 10.5 2z"/>
+    </symbol>
+    <symbol id="icon-settings" viewBox="0 0 21 21">
+        <path
+            d="M10.648 16.99a.498.498 0 0 1-.453-.29l-.762-1.623-1.43 1.115a.504.504 0 0 1-.605.008l-1.32-.97a.5.5 0 0 1-.176-.568l.574-1.65-1.782-.235a.499.499 0 0 1-.426-.405l-.302-1.645a.498.498 0 0 1 .285-.546l1.65-.76-1.17-1.47a.495.495 0 0 1-.01-.6l.98-1.32c.13-.17.36-.244.56-.174l1.75.587.266-1.835a.496.496 0 0 1 .426-.423l1.666-.224c.214-.03.42.08.516.276l.826 1.657L13.144 4.8a.501.501 0 0 1 .6-.003l1.316.97a.5.5 0 0 1 .178.57l-.63 1.74 1.78.26c.214.03.383.195.42.407l.294 1.64a.5.5 0 0 1-.29.544l-1.56.685 1.046 1.4c.13.176.13.417 0 .594l-.97 1.323c-.13.18-.36.26-.576.18l-1.712-.62-.252 1.826c-.03.22-.2.39-.417.425l-1.64.26a.465.465 0 0 1-.075.006zm-1.335-2.954c.038 0 .076.004.113.013l.476.11c.15.03.276.13.34.27l.7 1.5.905-.14.232-1.69c.02-.15.1-.28.22-.36l.4-.253a.5.5 0 0 1 .434-.047l1.59.578.53-.72-1.06-1.416a.503.503 0 0 1-.087-.415l.066-.28a.501.501 0 0 1 .286-.347l1.57-.685-.16-.897-1.667-.242a.503.503 0 0 1-.36-.24l-.233-.404a.51.51 0 0 1-.04-.424l.58-1.614-.714-.525L12.1 6.822a.502.502 0 0 1-.428.084l-.465-.12a.492.492 0 0 1-.323-.26l-.76-1.536-.937.13-.243 1.71a.497.497 0 0 1-.23.35l-.375.236a.507.507 0 0 1-.425.05l-1.647-.56-.53.715 1.08 1.35c.093.12.128.27.095.42l-.11.493a.504.504 0 0 1-.283.347l-1.515.688.166.9 1.7.225c.15.02.28.104.36.23l.22.35c.082.128.1.287.05.43l-.54 1.577.72.53L9 14.13a.486.486 0 0 1 .306-.104z"/>
+        <path
+            d="M10.538 12.7c-1.235 0-2.246-.99-2.253-2.21a2.25 2.25 0 0 1 2.188-2.25c1.297 0 2.275.978 2.283 2.225a2.234 2.234 0 0 1-.654 1.57 2.23 2.23 0 0 1-1.558.665h-.006zm-.013-3.46c-.69.015-1.244.585-1.24 1.245.004.67.566 1.215 1.253 1.215v.5l.004-.5c.308 0 .618-.136.85-.37a1.222 1.222 0 0 0-.866-2.09z"/>
+    </symbol>
+</svg>
+<!-- endinject -->
 
 </body>
 </html>

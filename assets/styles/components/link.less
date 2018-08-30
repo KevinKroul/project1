@@ -2,11 +2,11 @@
     font-family: 'YS Text', Arial, Helvetica, sans-serif;
     font-size: 12px;
     text-decoration: none;
-    color: black;
+    color: @basic;
 
 
     &:hover {
-        color: #cc0000;
+        color: @basic-hover;
         cursor: pointer;
     }
 
@@ -16,6 +16,10 @@
         height: 48px;
         background-size: 100% 100%;
         background-image: url("//yastatic.net/www/2.1768/common/blocks/weather-icons/general/skc-n.png");
+    }
+
+    &:hover + &._quantity {
+        color: @basic-hover;
     }
 
     &__light-icon {
@@ -36,44 +40,34 @@
         font-weight: bold;
     }
 
-    &._invisible-link {
-        color: #999;
+    &._invisible {
+        color: @invisible;
     }
 
-    &._invisible-link:hover {
-        color: #cc0000;
+    &._invisible:hover {
+        color: @basic-hover;
     }
 
-    &._basic-link {
-        color: #0054b9;
+    &._primary {
+        color: @header;
         font-weight: bold;
         font-size: 15px;
     }
 
-    &._basic-link:hover {
-        color: #cc0000;
+    &._primary:hover {
+        color: @basic-hover;
     }
 
-    &._extra-link {
-        color: #0998fa;
+    &._extra {
+        color: @extra;
         font-size: 12px;
     }
 
-    &._extra-link:hover {
-        color: #cc0000;
+    &._extra:hover {
+        color: @basic-hover;
     }
 
-    &._direct {
-        color: white;
-        opacity: 0.8;
-    }
-
-    &._direct:hover {
-        opacity: 1;
-        color: white;
-    }
-
-    &._big {
+    &._quantity {
         font-size: 30px;
         padding-right: 15px;
     }

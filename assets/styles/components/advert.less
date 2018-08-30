@@ -1,3 +1,24 @@
+@keyframes advert-image {
+    0% {
+        transform: translateY(0px);
+    }
+    8% {
+        transform: translateY(-172px);
+    }
+    14% {
+        transform: translateY(-172px);
+    }
+    18% {
+        transform: translateY(-86px);
+    }
+    95% {
+        transform: translateY(-86px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
 .advert {
     position: relative;
     padding-left: 36px;
@@ -16,22 +37,57 @@
         flex-wrap: nowrap;
         height: 90px;
         width: 760px;
+        z-index: 1;
         background-color: #f5f5f5;
-    }
-
-    &__link:hover {
-        cursor: pointer;
+        overflow: hidden;
     }
 
     &__image {
         width: 259px;
-        background-image: url("//yastatic.net/www/_/X9Gf63/9c73e3Ekh/zrIP6oS/vpT/ai5HyA_cpM/5oP/o3Did3Uc/SEgmVu/mpFG/HF-E7e393/gqzJ/9d5pqa/L3mDpm1O/k_mmj/VhQv5J/sdxXxI/ZaLTvvh/p");
+        height: 260px;
+        z-index: 1;
+        background-image: url("//yastatic.net/www/_/j7Q9M8/2e8e10BuYO/xI4/pe25RoaMEP/rMijbZ/Ea/wtR7cia2/paA9v/27A8mxdb/HYt/bSh7Kg/pPgYfdfjhV/ms/phvJqSJL/MyxFI/gQDa50/7mFobabQ");
+        background-size: cover;
+        animation: advert-image 40s linear infinite alternate;
+    }
+
+    &__direct {
+        position: absolute;
+        top: 1px;
+        left: 1px;
+        padding: 6px 8px 7px;
+        z-index: 3;
+        font-size: 11px;
+        color: rgba(255, 255, 255, 0.8);
+        background-color: rgba(0,0,0,0.24);
+        border-bottom-right-radius: 4px;
+
+        &:hover {
+            z-index: 3;
+            color: rgba(255, 255, 255, 1);
+            background-color: rgba(0,0,0,0.24);
+            cursor: pointer;
+        }
+    }
+
+    &__link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 90px;
+        z-index: 2;
+        cursor: pointer;
     }
 
     &__content {
-        padding: 16px;
+        padding: 12px;
         margin-bottom: 0;
         width: 330px;
+    }
+
+    &__text {
+        margin-top: 5px;
     }
 
     &__title {
@@ -51,15 +107,16 @@
         width: 121px;
         height: 32px;
         line-height: 32px;
+        z-index: 100;
         text-align: center;
         color: white;
         border-radius: 3px;
         background-color: #2ea5f4;
-    }
 
-    &__button:hover {
-        background-color: #0998fa;
-        cursor: pointer;
+        &:hover {
+            background-color: #0998fa;
+            cursor: pointer;
+        }
     }
 
     &__site {
@@ -69,11 +126,13 @@
         line-height: 32px;
         text-align: center;
         color: #999;
+        z-index: 4;
         font-size: 10px;
-    }
 
-    &__site:hover {
-        cursor: pointer;
+        &:hover {
+            color: black;
+            cursor: pointer;
+        }
     }
 
     &__close {
@@ -82,7 +141,12 @@
         right: 0;
         width: 16px;
         height: 16px;
+        z-index: 4;
         background: url(//yastatic.net/www/_/R/6/NrxzASAPi9QSmGS6qAwJt-XRA.svg) center center #fff no-repeat;
         background-color: #f5f5f5;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 }

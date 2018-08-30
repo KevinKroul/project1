@@ -1,13 +1,20 @@
 .dzen-widget {
   position: absolute;
   top: 141px;
-  right: 0px;
+  right: 0;
   width: 192px;
   height: 110px;
   cursor: pointer;
-  border: 1px solid;
 
+  &:hover &__adme {
+    transform: translateX(-15px);
+    transition: transform 0.2s ease-out;
+  }
 
+  &:hover &__options {
+    opacity: 0.3;
+    transition: opacity 0.5s ease-in;
+  }
 
   &__adme {
     position: absolute;
@@ -20,23 +27,18 @@
     padding: 12px 14px;
     width: 152px;
     font-size: 12px;
-    transition: transform 0.2s ease-out;
 
-    &:hover {
-      transform: translateX(-20px);
-
-    }
 
     &._shadow-box {
-      box-shadow: 0 0 2px 0 rgba(0,0,0,0.1),
-      0 2px 6px 0 rgba(0,0,0,0.1);
+      box-shadow: 0 0 2px 0 @shadow-box,
+      0 2px 6px 0 @shadow-box;
     }
 
   }
 
 
   &__title {
-    color: #999;
+    color: @invisible;
   }
 
   &__icon {
@@ -64,12 +66,12 @@
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: 24px 24px;
-    opacity: 0.3;
-    border: 1px solid;
+    opacity: 0;
   }
 
   &__options:hover {
-    opacity: 1;
+    opacity: 1 !important;
+    transition: opacity 0s !important;
   }
 }
 

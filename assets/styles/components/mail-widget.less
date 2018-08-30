@@ -31,7 +31,7 @@
         padding-top: 7px;
         padding-bottom: 8px;
         height: 15.2px;
-        background-color: #e5e5e5;
+        background-color: @mail-btn;
         border-radius: 3px;
         cursor: pointer;
     }
@@ -43,7 +43,7 @@
     }
 
     &__nav:nth-child(2):hover {
-        background-color: #dedede;
+        background-color: @mail-btn-hover;
     }
 
     &__registration {
@@ -53,14 +53,14 @@
     }
 
     &._shadow-box {
-        box-shadow: 0 0 2px 0 rgba(0,0,0,.1),
-                    0 2px 6px 0 rgba(0,0,0,.1);
+        box-shadow: 0 0 2px 0 @shadow-box,
+                    0 2px 6px 0 @shadow-box;
         width: 152px;
     }
 
 
     &._button:hover {
-        background-color: #dedede;
+        background-color: @mail-btn-hover;
     }
 
 }
