@@ -52,9 +52,10 @@
 }
 .advert {
   position: relative;
-  padding-left: 36px;
+  top: 15px;
+  left: -133px;
   height: 108px;
-  min-width: 900px;
+  min-width: 600px;
   font-size: 12px;
 }
 .advert__content-block {
@@ -67,7 +68,6 @@
   align-content: center;
   flex-wrap: nowrap;
   height: 90px;
-  width: 760px;
   z-index: 1;
   background-color: #f5f5f5;
   overflow: hidden;
@@ -87,7 +87,7 @@
   left: 1px;
   padding: 6px 8px 7px;
   z-index: 3;
-  font-size: 11px;
+  font-size: 12px;
   color: rgba(255, 255, 255, 0.8);
   background-color: rgba(0, 0, 0, 0.24);
   border-bottom-right-radius: 4px;
@@ -113,7 +113,7 @@
   width: 330px;
 }
 .advert__text {
-  margin-top: 5px;
+  margin-top: 10px;
 }
 .advert__title {
   font-size: 15px;
@@ -124,9 +124,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-right: 10px;
 }
 .advert__button {
   display: inline-block;
+  margin-right: 10px;
   width: 121px;
   height: 32px;
   line-height: 32px;
@@ -174,9 +176,9 @@
 }
 .dzen-widget {
   position: absolute;
-  top: 141px;
-  right: 0;
-  width: 192px;
+  top: 140px;
+  right: 12px;
+  width: 178px;
   height: 110px;
   cursor: pointer;
 }
@@ -194,13 +196,14 @@
 .dzen-widget__adme {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 2px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   padding: 12px 14px;
-  width: 152px;
+  width: 180px;
+  height: 105px;
   font-size: 12px;
 }
 .dzen-widget__adme._shadow-box {
@@ -331,8 +334,8 @@
 }
 .location {
   position: absolute;
-  top: 10px;
-  left: 18px;
+  top: 9px;
+  left: 28px;
   width: 66.88px;
   height: 42px;
   text-decoration: none;
@@ -347,7 +350,7 @@
 }
 .location__svg {
   position: absolute;
-  left: 0;
+  left: 18px;
   top: 50%;
   width: 19px;
   height: 19px;
@@ -380,8 +383,8 @@
   flex-wrap: nowrap;
   align-items: center;
   padding: 12px 14px;
-  width: 152px;
-  height: 96.6px;
+  width: 175px;
+  height: 120px;
   font-size: 12px;
 }
 .mail-widget__nav {
@@ -390,7 +393,7 @@
   justify-content: center;
   align-items: center;
   height: 32.2px;
-  width: 152px;
+  width: 150px;
 }
 .mail-widget__nav:first-child {
   position: relative;
@@ -400,14 +403,13 @@
 .mail-widget__nav:nth-child(2) {
   padding-top: 7px;
   padding-bottom: 8px;
-  height: 15.2px;
+  height: 30px;
   background-color: #e5e5e5;
   border-radius: 3px;
   cursor: pointer;
 }
 .mail-widget__nav:last-child {
-  padding-top: 14px;
-  padding-bottom: 4px;
+  padding-top: 21px;
   height: 14.2px;
 }
 .mail-widget__nav:nth-child(2):hover {
@@ -416,11 +418,16 @@
 .mail-widget__registration {
   position: absolute;
   top: 0;
-  right: 0;
+  right: 4px;
+}
+.mail-widget__mail {
+  position: absolute;
+  top: 0;
+  right: 20px;
 }
 .mail-widget._shadow-box {
   box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1), 0 2px 6px 0 rgba(0, 0, 0, 0.1);
-  width: 152px;
+  width: 175px;
 }
 .mail-widget._button:hover {
   background-color: #dedede;
@@ -476,10 +483,10 @@
 .news__location {
   padding-left: 12px;
   font-weight: bold;
-  font-size: 13px;
+  font-size: 15px;
 }
 .news__text {
-  padding-left: 12px;
+  padding-left: 22px;
   color: #999;
   font-size: 12px;
 }
@@ -494,19 +501,19 @@
   margin: 0;
   padding-left: 0;
   width: 100%;
-  line-height: 14px;
+  line-height: 13px;
   text-align: left;
   list-style: none;
 }
 .news__list-item {
   position: relative;
-  padding-left: 21px;
+  padding-left: 19px;
   margin-bottom: 10px;
 }
 .news__list-item::before {
   position: absolute;
   top: 0;
-  left: 0;
+  left: -5px;
   content: "";
   width: 14px;
   height: 14px;
@@ -524,7 +531,8 @@
   justify-content: flex-end;
   align-items: flex-start;
   padding: 8px 4px 4px 20px;
-  width: 25%;
+  margin-left: 70px;
+  width: 273px;
 }
 .news__image {
   width: 120px;
@@ -564,16 +572,15 @@
 }
 .search {
   position: relative;
-  padding-right: 36px;
+  padding-right: 11px;
+  padding-top: 12px;
   height: 115px;
-  min-width: 500px;
-  width: 80%;
-  border: 1px solid;
+  min-width: 895px;
 }
 .search__logo-image {
   position: absolute;
-  top: 0;
-  left: -140px;
+  top: 11px;
+  left: -142px;
   width: 140px;
   height: 100px;
 }
@@ -606,7 +613,7 @@
   list-style: none;
 }
 .search__list-item:not(:first-child) {
-  margin-left: 20px;
+  margin-left: 23px;
 }
 .search__list-link {
   color: #0054b9;
@@ -637,7 +644,7 @@
 .search__icon-microphone {
   position: absolute;
   top: 0;
-  right: 42px;
+  right: 44px;
   width: 32px;
   height: 100%;
   transition: opacity 0.1s ease-out;
@@ -651,8 +658,8 @@
 }
 .search__icon-keyboard {
   position: absolute;
-  top: 0;
-  right: 5px;
+  top: 1px;
+  right: 13px;
   padding-right: 11px;
   padding-left: 2px;
   width: 27px;
@@ -670,7 +677,7 @@
 .search__button {
   display: inline-block;
   position: relative;
-  width: 79px;
+  width: 83px;
   height: 36px;
   line-height: 34px;
   vertical-align: top;
@@ -707,33 +714,35 @@
   justify-content: flex-start;
   align-items: flex-end;
   margin-top: 8px;
-  padding-right: 64px;
+  padding-right: 40px;
   width: 100%;
   height: 15px;
-  font-size: 12px;
+  font-size: 13px;
 }
 .search__offer {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 1px;
+  right: 5px;
   margin-right: 64px;
-  height: 15px;
+  font-size: 13px;
 }
 .search__icon {
   position: absolute;
   top: 0;
-  left: -30px;
+  left: -45px;
   width: 30px;
   height: 15px;
 }
 .widget {
   display: flex;
   position: relative;
+  top: 21px;
+  left: 0px;
   flex-direction: column;
   justify-content: flex-start;
-  align-content: stretch;
+  align-content: flex-end;
   padding: 8px 4px 4px 20px;
-  width: 90%;
+  width: 278px;
 }
 .widget:hover .widget__svg {
   fill-opacity: 0.4;
@@ -743,16 +752,21 @@
   transition: fill-opacity 0s;
 }
 .widget._wheather {
-  height: 78.4px;
+  height: 90px;
 }
 .widget._traffic-jam {
-  height: 78.4px;
+  margin-left: -15px;
+  height: 90px;
 }
 .widget._sites {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
+  margin-left: 27px;
+}
+.widget__text {
+  margin-left: 10px;
 }
 .widget__icon {
   position: absolute;
@@ -762,6 +776,7 @@
   height: 27px;
 }
 .widget__svg {
+  display: none;
   width: 27px;
   height: 27px;
   fill-opacity: 0;
@@ -795,6 +810,7 @@
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 10px;
+  margin-left: 6px;
 }
 .widget__time {
   font-size: 12px;
@@ -812,10 +828,11 @@
   margin: 0;
 }
 .widget__list-map-items {
-  margin-right: 15px;
-  margin-bottom: 10px;
+  margin-right: 17px;
+  margin-bottom: 8px;
 }
 .widget__usual-text {
+  padding-left: 10px;
   font-size: 12px;
   color: #999;
 }
@@ -847,7 +864,7 @@
 .widget__triangle {
   position: absolute;
   top: 7px;
-  left: 10px;
+  left: 6px;
   width: 8px;
   height: 9px;
   background: url("https://yastatic.net/www/_/_/g/wLmTI9DsolsX51zBbYe_uAFUM.svg") 50% 50% no-repeat;

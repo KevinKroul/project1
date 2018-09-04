@@ -1,11 +1,13 @@
 .widget {
     display: flex;
     position: relative;
+    top: 21px;
+    left: 0px;
     flex-direction: column;
     justify-content: flex-start;
-    align-content: stretch;
+    align-content: flex-end;
     padding: 8px 4px 4px 20px;
-    width: 90%;
+    width: 278px;
 
     &:hover &__svg {
         fill-opacity: 0.4;
@@ -17,11 +19,12 @@
     }
 
     &._wheather {
-        height: 78.4px;
+        height: 90px;
     }
 
     &._traffic-jam {
-        height: 78.4px;
+        margin-left: -15px;
+        height: 90px;
     }
 
     &._sites {
@@ -29,6 +32,11 @@
         flex-direction: column;
         justify-content: flex-end;
         align-items: flex-start;
+        margin-left: 27px;
+    }
+
+    &__text {
+        margin-left: 10px;
     }
 
 
@@ -41,6 +49,7 @@
     }
 
     &__svg {
+        display: none;
         width: 27px;
         height: 27px;
         fill-opacity: 0;
@@ -79,6 +88,7 @@
         justify-content: flex-start;
         align-items: center;
         margin-bottom: 10px;
+        margin-left: 6px;
 
     }
 
@@ -101,11 +111,12 @@
     }
 
     &__list-map-items {
-        margin-right: 15px;
-        margin-bottom: 10px;
+        margin-right: 17px;
+        margin-bottom: 8px;
     }
 
     &__usual-text {
+        padding-left: 10px;
         font-size: 12px;
         color: @invisible;
     }
@@ -137,7 +148,7 @@
     &__triangle {
         position: absolute;
         top: 7px;
-        left: 10px;
+        left: 6px;
         width: 8px;
         height: 9px;
         background: url("https://yastatic.net/www/_/_/g/wLmTI9DsolsX51zBbYe_uAFUM.svg") 50% 50% no-repeat;
