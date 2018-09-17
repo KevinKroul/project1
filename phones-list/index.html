@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+  <style>
+    .layout {
+      min-height: 110vh;
+      border: 1px solid black;
+      overflow: auto;
+    }
+  </style>
+</head>
+
+<body>
+
+<!--<main class="layout" id="layout">-->
+
+<!--</main>-->
+
+  <button onclick="loadBlocks()" id="button">
+    Загрузить phones.json!
+  </button>
+
+
+  <script>
+
+      // var layout = document.getElementById("layout");
+      //
+      // layout.addEventListener('scroll', function() {
+      //     if (layout.pageYOffset + layout.clientHeight >= layout.scrollHeight) {
+      //         loadBlocks();
+      //     }
+      // });
+      //
+      // loadBlocks();
+
+
+
+    function loadBlocks() {
+
+      var xhr = new XMLHttpRequest();
+
+      xhr.open('GET', 'blocks.json', true);
+
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState !== 4) return;
+
+
+
+        if (xhr.status !== 200) {
+          // обработать ошибку
+          alert(xhr.status + ': ' + xhr.statusText);
+        } else {
+
+          try {
+            var blocks = JSON.parse(xhr.responseText);
+
+          } catch (e) {
+            alert("Некорректный ответ " + e.message);
+          }
+
+          showBlocks(blocks);
+        }
+
+      }
+
+      xhr.send();
+
+    }
+
+
+
+    function showBlocks(blocks) {
+      blocks.forEach(function(block) {
+
+          var div = document.body.appendChild(document.createElement('div'));
+          div.style.width = block.width;
+          div.style.height = block.height;
+          div.style.backgroundColor = block.backgroundColor;
+
+      });
+
+    }
+
+    // TODO append blocks with fragment
+    // var fragment = document.createDocumentFragment();
+    //
+    // var div1 = document.createElement("div");
+    // var div2 = document.createElement("div");
+    // var div3 = document.createElement("div");
+    //
+    // fragment.appendChild(div1);
+    // fragment.appendChild(div2);
+    // fragment.appendChild(div3);
+
+  </script>
+
+</body>
+
+</html>

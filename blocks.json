@@ -1,0 +1,21 @@
+[
+  {
+    "width": "100%",
+    "height": "100px",
+    "backgroundColor": "#daff8f",
+    "name": "first block"
+  },
+  {
+    "width": "100%",
+    "height": "100px",
+    "backgroundColor": "#ff4c94",
+    "name": "second block"
+  },
+  {
+    "width": "100%",
+    "height": "100px",
+    "backgroundColor": "#705eff",
+    "name": "third block"
+ }
+
+]

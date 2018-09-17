@@ -1,0 +1,20 @@
+[
+  {
+    "width": "100%",
+    "height": "250px",
+    "backgroundColor": "red",
+    "name": "first block"
+  },
+  {
+    "width": "100%",
+    "height": "250px",
+    "backgroundColor": "blue",
+    "name": "second block"
+  },
+  {
+    "width": "100%",
+    "height": "250px",
+    "backgroundColor": "green",
+    "name": "third block"
+  }
+]
